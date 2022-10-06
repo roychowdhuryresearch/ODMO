@@ -116,16 +116,6 @@ def initialize_dataloaders(args):
             extras=extras,
             seed = seed
             )
-    else:
-        train_loader, val_loader, _ = create_kfold_loader(
-            dataset,
-            folder_num=1,
-            batch_size=batch_size,
-            p_val=p_val,
-            p_test=p_test,
-            extras=extras,
-            seed = seed
-        )
     
     dataloaders = {"train": train_loader,
                    "valid": val_loader}
