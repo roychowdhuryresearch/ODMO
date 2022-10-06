@@ -1,0 +1,3 @@
+nohup python ./src/customization/modes_discovery_interpolation.py mocap pretrained use_end cuda:0 > logs/log_modes_discovery_mocap &
+nohup python ./src/customization/modes_discovery_interpolation.py HumanAct12 pretrained use_end cuda:1 > logs/log_modes_discovery_HumanAct12 &
+nohup python ./src/customization/modes_discovery_interpolation.py uestc pretrained use_end cuda:2 > logs/log_modes_discovery_uestc &
