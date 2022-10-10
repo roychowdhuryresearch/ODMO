@@ -7,6 +7,19 @@ Action-conditioned On-demand Motion Generation
 Qiujing Lu*, Yipeng Zhang*, Mingjian Lu, Vwani Roychowdhury
 ACMMM 2022
 
+### [**Project page**](https://roychowdhuryresearch.github.io/ODMO_ACMMM2022/) 
+
+### Bibtex 
+If you find our project is useful in your research, please cite:
+```
+@inproceedings{lu2022action,
+  title={Action-conditioned On-demand Motion Generation},
+  author={Lu, Qiujing and Zhang, Yipeng and Lu, Mingjian and Roychowdhury, Vwani},
+  booktitle={Proceedings of the 30th ACM International Conference on Multimedia},
+  year={2022}
+}
+```
+
 # Installation 
 ### Dependencies
 Anaconda is recommended to create the virtual environment
