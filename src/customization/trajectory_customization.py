@@ -100,7 +100,7 @@ def endloc_customization(trainer, save_dir, draw_traj=True, draw_gif= False, com
     print("avg error and error rate", np.mean(class_mse), np.mean(class_error_rate))
     return np.mean(class_mse)
 
-def run(seed, model_name_list, device):
+def run(seed,dataset_name, model_name_list, device):
     torch.manual_seed(seed)
     random.seed(seed)
     np.random.seed(seed)
@@ -110,7 +110,7 @@ def run(seed, model_name_list, device):
     compute_metric = True
     res = {}
     for model_name in model_name_list:
-        dataset_name = model_name.split("_")[0]
+        #dataset_name = model_name.split("_")[0]
         save_dir = os.path.join("./results/endloc_customization", dataset_name)
         os.makedirs(save_dir, exist_ok=True)
         model_path = os.path.join(model_dir, model_name)
@@ -137,11 +137,11 @@ if __name__ == "__main__":
         model_dir = "ckpt/pretrained"
         model_name = f"{dataset_name}_end_release.pkg"
     else:
-        model_dir = os.path.join("ckpt", os.path.join(sys.argv[2]))
+        model_dir = os.path.join("ckpt",dataset_name, os.path.join(sys.argv[2]))
         model_name = find_best_model(model_dir)
     temp_name = model_name.split(".")[0]
     df = pd.DataFrame()
     for seed in range(10):
-        sed_res = run(seed, [model_name],device)
+        sed_res = run(seed, dataset_name, [model_name],device)
         df = df.append(pd.DataFrame.from_records([sed_res], index='seed'))
     df.to_csv(os.path.join("./results/endloc_customization",f"end_loc_metric_{temp_name}.csv"))
