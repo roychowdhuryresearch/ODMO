@@ -1,5 +1,5 @@
 # ODMO
-[ACMMM 2022] Official PyTorch Implementation of ["Action-conditioned On-demand Motion Generation". ACM MultiMedia 2022](https://arxiv.org/abs/2207.08164).
+[ACMMM 2022] Official PyTorch Implementation of ["Action-conditioned On-demand Motion Generation". ACM MultiMedia 2022](https://dl.acm.org/doi/10.1145/3503161.3548287).
 
 This repo contains the official implementation of our paper:
 
