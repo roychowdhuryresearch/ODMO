@@ -8,7 +8,7 @@ param_dict={"dataset_name" :"mocap",
 # training parameter
 "num_workers" : 1,
 "lr" : 1e-3,
-"batch_size" : 256,
+"batch_size" : 512,
 "p_test" : 0.1,
 "p_val" : 0.1,
 "seed": 42,
