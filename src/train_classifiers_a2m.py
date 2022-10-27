@@ -156,7 +156,6 @@ if __name__ == "__main__":
     csv_fn = args["csv_fn"]
     lr = 1e-3
 
-    args["classifier_mode"] = "traj_mv"
     classifier_mode = args["classifier_mode"]
     output_size = args["num_class"]
     layers = args["c_layers"]
