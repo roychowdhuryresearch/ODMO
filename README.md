@@ -28,7 +28,7 @@ conda env create -f environment.yml
 conda activate ODMO
 ```
 
-### For those who use pip (that may not work for 4090)
+### For those who use pip
 ```
 conda create -n ODMO python=3.8.8
 conda activate ODMO
