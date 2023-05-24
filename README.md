@@ -30,7 +30,10 @@ conda activate ODMO
 
 ### For those who use pip (that may not work for 4090)
 ```
+conda create -n ODMO python=3.8.8
+conda activate ODMO
 pip install -r requirements.txt
+(for cudnn11) pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 torchaudio==0.8.0 -f https://download.pytorch.org/whl/torch_stable.html
 ```
 
 ### Clean up the directory
