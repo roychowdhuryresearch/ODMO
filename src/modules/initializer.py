@@ -130,10 +130,15 @@ def initialize_evaluator(args, classifier_type = "a2m"):
     num_class = args["num_class"]
     motion_length = args["motion_length"]
     motionft_dim = args["motionft_dim"]
-    classifier_mode = args["classifier_mode"] 
-    evaluator = Evaluator(num_class, motion_length, motionft_dim, 
-                c_hidden_dim, c_hidden_layer, c_path, dataset_name=dataset_name, classifier_mode=classifier_mode,
-                param_dict=args,device=device, classifier_type=classifier_type) 
+    classifier_mode = args["classifier_mode"]
+    if "option" in args: 
+        evaluator = Evaluator(num_class, motion_length, motionft_dim, 
+                    c_hidden_dim, c_hidden_layer, c_path, dataset_name=dataset_name, classifier_mode=classifier_mode,
+                    param_dict=args,device=device, classifier_type=classifier_type, option=args["option"])
+    else:   
+        evaluator = Evaluator(num_class, motion_length, motionft_dim, 
+                    c_hidden_dim, c_hidden_layer, c_path, dataset_name=dataset_name, classifier_mode=classifier_mode,
+                    param_dict=args,device=device, classifier_type=classifier_type)
     return evaluator
 
 def initialize_model(args):

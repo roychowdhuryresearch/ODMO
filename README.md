@@ -28,6 +28,11 @@ conda env create -f environment.yml
 conda activate ODMO
 ```
 
+### For those who use pip (that may not work for 4090)
+```
+pip install -r requirements.txt
+```
+
 ### Clean up the directory
 
 ```
@@ -42,16 +47,18 @@ sh ./scripts/download/download_dataset.sh
 ```
 sh ./scripts/download/download_pretrain.sh
 ```
+### If download (gdown) failed, please download from the link in the scripts and unzip it in to the home directory
+
 
 # Training and Evaluation 
 ## **For generating metric based on the pretrained model**
-1. sample real motion
+1. sample real motion (this may take a while, for about 5 minutes)
 ```
 sh ./scripts/model/sample_realdata.sh
 ```
 Please go to the ./logs/ folder to check the status and wait for *"Sample real data from {dataset_name} is accomplished"*
 
-2. sample the pretrained model
+2. sample the pretrained model (please be aware of the cuda device in the script)
 ```
 sh ./scripts/model/pretrain_inference.sh
 ```
