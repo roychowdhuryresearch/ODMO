@@ -24,7 +24,7 @@ If you find our project is useful in your research, please cite:
 ### Dependencies
 Anaconda is recommended to create the virtual environment
 ```
-conda env create python=3.8 -f environment.yml
+conda env create -f environment.yml
 conda activate ODMO
 ```
 
